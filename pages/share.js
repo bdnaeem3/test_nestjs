@@ -40,11 +40,11 @@ const SocialShare = ({
         <FacebookIcon size={32} round /> 2
       </FacebookShareButton>
 
-      <TwitterShareButton url={url} title={title}>
+      <TwitterShareButton url={domain} title={title}>
         <TwitterIcon size={32} round />
       </TwitterShareButton>
 
-      <LinkedinShareButton url={url}>
+      <LinkedinShareButton url={domain}>
         <LinkedinIcon size={32} round />
       </LinkedinShareButton>
     </div>
