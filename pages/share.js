@@ -9,7 +9,7 @@ import {
   LinkedinIcon,
   TwitterIcon,
   WhatsappIcon,
-} from "next-share";
+} from "react-share";
 import CommonMeta from "./meta";
 import { useEffect, useState } from "react";
 
