@@ -30,16 +30,9 @@ const SocialShare = ({
   return (
     <div className="flex gap-2">
       <CommonMeta />
-      <FacebookShareButton url={url} quote={title}>
-        <FacebookIcon size={32} round />
-      </FacebookShareButton>
-
-      <FacebookShareButton url={"https://yourwebsite.com"} quote={title}>
-        <FacebookIcon size={32} round />
-      </FacebookShareButton>
-
+      
       <FacebookShareButton url={domain} quote={title}>
-        <FacebookIcon size={32} round /> 2
+        <FacebookIcon size={32} round />
       </FacebookShareButton>
 
       <TwitterShareButton url={domain} title={title}>
