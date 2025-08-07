@@ -4,9 +4,11 @@ import {
   FacebookShareButton,
   LinkedinShareButton,
   TwitterShareButton,
+  WhatsappShareButton,
   FacebookIcon,
   LinkedinIcon,
   TwitterIcon,
+  WhatsappIcon,
 } from "next-share";
 import CommonMeta from "./meta";
 import { useEffect, useState } from "react";
@@ -20,7 +22,7 @@ const SocialShare = ({
   useEffect(() => {
     if (typeof window !== "undefined") {
       const domain = window.location.href;
-      console.log('domain', domain)
+      console.log("domain", domain);
       setDomain(domain); // e.g. "example.com"
     }
   }, []);
@@ -47,6 +49,10 @@ const SocialShare = ({
       <LinkedinShareButton url={domain}>
         <LinkedinIcon size={32} round />
       </LinkedinShareButton>
+
+      <WhatsappShareButton url={domain}>
+        <WhatsappIcon size={32} round />
+      </WhatsappShareButton>
     </div>
   );
 };
