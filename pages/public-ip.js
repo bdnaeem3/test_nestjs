@@ -1,10 +1,4 @@
-import { NextPage } from "next";
-
-export interface SignInPageProps {
-  publicIP: any;
-}
-
-const SignInPage: NextPage<SignInPageProps> = (props) => {
+const SignInPage = (props) => {
   const { publicIP } = props;
 
   console.log("publicIP client", publicIP);
@@ -14,7 +8,7 @@ const SignInPage: NextPage<SignInPageProps> = (props) => {
 
 export default SignInPage;
 
-export async function getServerSideProps({ req, res }: any) {
+export async function getServerSideProps({ req, res }) {
   const forwarded = req.headers["x-forwarded-for"];
   let publicIP = Array.isArray(forwarded)
     ? forwarded[0]
